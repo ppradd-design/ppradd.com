@@ -1,0 +1,55 @@
+.pwrapper {
+  max-width: 1500px;
+  margin: 0 0px;
+ /* display: grid;*/
+  grid-gap: 10px;
+}
+
+
+/* no grid support? */
+
+.pwrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pwrapper {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+}
+
+.ppanel {
+  /* needed for the flex layout*/
+  margin-left: 1px;
+  margin-right: 1px;
+  flex: 1 1 300px;
+  width: 100%;
+ 
+}
+
+.ppanel img {
+  display: block;
+  max-width: 100%;
+}
+
+.tall-panel {
+  grid-row-end: span 2;
+}
+
+
+.wide-panel {
+  grid-column-end: span 2;
+
+}
+
+.tall-wide-panel {
+  grid-row-end: span 2;
+  grid-column-end: span 2;
+
+}
+
+.pwrapper > * {
+  margin-bottom: 1px;
+}
